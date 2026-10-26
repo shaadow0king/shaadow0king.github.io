@@ -23,8 +23,8 @@ const copy = {
   },
   hero: {
     intro: {
-      ru: "Тестирую мобильные игры и приложения на Android, iOS, Huawei, Amazon и Windows. Слежу за стабильностью, UX/UI и логикой.",
-      en: "I test mobile games and apps on Android, iOS, Huawei, Amazon and Windows, with an eye on stability, UX/UI and logic.",
+      ru: "Тестирую мобильные игры и приложения на Android, iOS и Huawei. Слежу за стабильностью, UX/UI и логикой.",
+      en: "I test mobile games and apps on Android, iOS and Huawei, with an eye on stability, UX/UI and logic.",
     },
     quoteStart: { ru: "Но чаще всего на что-то жму", en: "Usually I press something" },
     quoteEnd: { ru: "— и всё ломается.", en: "— and everything breaks." },
@@ -64,8 +64,8 @@ const copy = {
   about: {
     paragraphs: [
       {
-        ru: "Тестирую приложения на Android, iOS, Huawei, Amazon и Windows. Оцениваю стабильность, воспроизводимость и влияние ошибок на пользовательский опыт, уделяю внимание UX/UI и логике работы приложений.",
-        en: "I test applications across Android, iOS, Huawei, Amazon and Windows. I assess stability, reproducibility and the impact of defects on user experience, with attention to UX/UI and application behavior and logic.",
+        ru: "Тестирую приложения на Android, iOS и Huawei. Оцениваю стабильность, воспроизводимость и влияние ошибок на пользовательский опыт, уделяю внимание UX/UI и логике работы приложений.",
+        en: "I test applications across Android, iOS and Huawei. I assess stability, reproducibility and the impact of defects on user experience, with attention to UX/UI and application behavior and logic.",
       },
       {
         ru: "Работаю на всём релизном цикле: от анализа требований и тест-документации до регресса, проверки аналитики и мониторинга после выпуска.",
@@ -102,36 +102,44 @@ const jobs: Job[] = [
     start: [2025, 7],
     bullets: [
       {
-        ru: "Ручное тестирование iOS-приложения, API и интеграций с бэкендом; проверка AI/ML-функций обработки фото и видео",
-        en: "Manually tested the iOS app, APIs and backend integrations, including AI/ML image and video processing features",
+        ru: "QA в Glam AI, одном из топ-10 приложений категории Photo & Video в App Store по всему миру: 18 млн установок и 2 млн активных пользователей в месяц (MAU)",
+        en: "QA at Glam AI, a top-10 Photo & Video app on the App Store worldwide: 18M installs and 2M monthly active users (MAU)",
       },
       {
-        ru: "Проверка подписок и монетизации: пейволы, покупки, пробные периоды, отмена, продление и истечение подписок",
-        en: "Validated subscription and monetization flows: paywalls, purchases, trials, cancellations, renewals and subscription expiry",
+        ru: "Обеспечивал стабильную работу воронок продаж и подписок (пейволы, покупки, пробные периоды, продление, отмена, оплата банковскими картами), что поддерживало рост выручки, retention и притока новых пользователей",
+        en: "Kept sales funnels and subscriptions bug-free (paywalls, purchases, trials, renewals, cancellations, bank-card payments), supporting revenue, retention and new-user growth",
       },
       {
-        ru: "В составе продуктовой команды участвовал в улучшении Daily Shots — retention направления вырос на 50%",
-        en: "Contributed to product-team improvements in Daily Shots, where retention increased by 50%",
+        ru: "Участвовал в улучшении Daily Shots: повторное использование среди платящих выросло с 7% до 58%",
+        en: "Improved Daily Shots: reuse among paying users grew from 7% to 58%",
       },
       {
-        ru: "Подготовка и проведение функциональных, регрессионных, интеграционных, smoke- и исследовательских проверок перед еженедельными релизами",
-        en: "Planned and performed functional, regression, integration, smoke and exploratory testing for weekly releases",
+        ru: "Использовал ИИ-помощников в ежедневной работе: код-ревью с Claude, составление тест-кейсов и документации, автоматизированные проверки",
+        en: "Used AI assistants daily: code review with Claude, test-case and documentation writing, automated checks",
       },
       {
-        ru: "Проверка API и серверной логики с помощью Postman, Charles Proxy и Proxyman",
-        en: "Tested APIs and backend logic using Postman, Charles Proxy and Proxyman",
+        ru: "Улучшал QA-процессы и работу с задачами в Notion, что ускорило работу команды",
+        en: "Improved QA processes and task management in Notion, speeding up the team's work",
       },
       {
-        ru: "Разбор и воспроизведение продакшен-дефектов совместно с iOS-, backend-, ML-командами, специалистами по компьютерному зрению, поддержкой и продуктовой командой",
-        en: "Investigated and reproduced production defects with iOS, backend, ML, computer vision, support and product teams",
+        ru: "Ручное тестирование iOS-приложения, API и интеграций с бэкендом, включая AI/ML-функции обработки фото и видео; функциональные, регрессионные, smoke- и исследовательские проверки перед еженедельными релизами",
+        en: "Manual testing of the iOS app, APIs and backend integrations, including AI/ML photo and video features; functional, regression, smoke and exploratory testing for weekly releases",
       },
       {
-        ru: "Участие в релизных процессах на базе CI/CD; работа с Xcode, TestFlight и GitHub",
-        en: "Participated in CI/CD release processes; worked with Xcode, TestFlight and GitHub",
+        ru: "Проверка API и серверной логики в Postman, Charles Proxy и Proxyman",
+        en: "API and backend testing with Postman, Charles Proxy and Proxyman",
       },
       {
-        ru: "Работа с Firebase, Bugsnag, Adapty и Amplitude при проверке стабильности, подписок и продуктовых сценариев",
-        en: "Used Firebase, Bugsnag, Adapty and Amplitude to validate stability, subscriptions and product flows",
+        ru: "Работа с консолью, установка и проверка сборок (Xcode, TestFlight), Git, участие в CI/CD-релизах",
+        en: "Command line, build installation and verification (Xcode, TestFlight), Git and CI/CD releases",
+      },
+      {
+        ru: "Разбор и воспроизведение продакшен-дефектов вместе с iOS-, backend-, ML-командами, поддержкой и продуктом",
+        en: "Investigated and reproduced production defects with iOS, backend, ML, support and product teams",
+      },
+      {
+        ru: "Firebase, Bugsnag, Adapty и Amplitude для проверки стабильности, подписок и продуктовых сценариев",
+        en: "Firebase, Bugsnag, Adapty and Amplitude to validate stability, subscriptions and product flows",
       },
     ],
   },
@@ -142,7 +150,10 @@ const jobs: Job[] = [
     start: [2023, 10],
     end: [2025, 5],
     bullets: [
-      { ru: "Ручное тестирование на iOS, Android, Amazon, Huawei и Windows", en: "Manual testing on iOS, Android, Amazon, Huawei and Windows" },
+      { ru: "Тестирование LiveOps: ивенты и регулярные обновления, поддерживающие рост числа игроков", en: "LiveOps testing: events and regular updates that supported player-base growth" },
+      { ru: "Снижение количества багов от релиза к релизу и стабильность сборок", en: "Fewer bugs from release to release and stable builds" },
+      { ru: "Тестирование монетизации и внутриигровых покупок: улучшения дали +10% к покупкам", en: "Monetization and in-app purchase testing: improvements lifted purchases by 10%" },
+      { ru: "Ручное тестирование на iOS, Android и Huawei", en: "Manual testing on iOS, Android and Huawei" },
       { ru: "Анализ требований и декомпозиция для проверки соответствия ТЗ", en: "Requirements analysis and decomposition to verify specification compliance" },
       { ru: "Тест-кейсы, чек-листы, тест-планы и баг-репорты в Asana", en: "Test cases, checklists, test plans and bug reports in Asana" },
       { ru: "A/B-тестирование и проверка аналитических событий в Amplitude и Swrve", en: "A/B testing and analytics-event validation in Amplitude and Swrve" },
@@ -199,8 +210,8 @@ const skills: { number: string; title: Copy; description: Copy; tools: string[] 
     number: "/02",
     title: { ru: "Тестирование и релизы", en: "Testing & releases" },
     description: {
-      ru: "Функциональное, нефункциональное, альфа/бета и регрессионное тестирование на Android, iOS, Huawei, Amazon и Windows.",
-      en: "Functional, non-functional, alpha/beta and regression testing on Android, iOS, Huawei, Amazon and Windows.",
+      ru: "Функциональное, нефункциональное, альфа/бета и регрессионное тестирование на Android, iOS и Huawei.",
+      en: "Functional, non-functional, alpha/beta and regression testing on Android, iOS and Huawei.",
     },
     tools: ["Android Studio", "Xcode", "3uTools", "Jenkins", "TeamCity"],
   },
@@ -602,7 +613,7 @@ export default function Home() {
     tabRefs.current[next]?.focus();
   };
 
-  const cvHref = asset(language === "ru" ? "/assets/files/CV.pdf" : "/assets/files/CV-en.pdf");
+  const cvHref = asset(language === "ru" ? "/assets/files/ru/CV_Gevork_Akopian.pdf" : "/assets/files/en/CV_Gevork_Akopian.pdf");
 
   return (
     <>
@@ -662,7 +673,7 @@ export default function Home() {
             </section>
 
             <div className="product-activity">
-              <a className="cv-card" href={cvHref} download aria-label={localize(copy.cv.aria, language)}>
+              <a className="cv-card" href={cvHref} download="CV_Gevork_Akopian.pdf" aria-label={localize(copy.cv.aria, language)}>
                 <span className="cv-card-face" aria-hidden="true"><span>QA_</span></span>
                 <span className="cv-card-copy">
                   <span className="cv-card-heading">
@@ -762,8 +773,8 @@ export default function Home() {
                       </a>
                     </li>
                   ))}
-                  <li><a className="connect-link" href={asset("/assets/files/CV.pdf")} download>{localize(copy.about.cvRu, language)}</a></li>
-                  <li><a className="connect-link" href={asset("/assets/files/CV-en.pdf")} download>{localize(copy.about.cvEn, language)}</a></li>
+                  <li><a className="connect-link" href={asset("/assets/files/ru/CV_Gevork_Akopian.pdf")} download="CV_Gevork_Akopian.pdf">{localize(copy.about.cvRu, language)}</a></li>
+                  <li><a className="connect-link" href={asset("/assets/files/en/CV_Gevork_Akopian.pdf")} download="CV_Gevork_Akopian.pdf">{localize(copy.about.cvEn, language)}</a></li>
                 </ul>
               </div>
               <div {...reveal(2, "about-copy")}>
