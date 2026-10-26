@@ -102,8 +102,8 @@ const jobs: Job[] = [
     start: [2025, 7],
     bullets: [
       {
-        ru: "QA в Glam AI, одном из топ-5 приложений категории Photo & Video в App Store по всему миру: 16 млн установок и 40 млн генераций в месяц",
-        en: "QA at Glam AI, a top-5 Photo & Video app on the App Store worldwide: 16M installs and 40M generations per month",
+        ru: "QA в Glam AI, одном из топ-10 приложений категории Photo & Video в App Store по всему миру: 18 млн установок и 2 млн активных пользователей в месяц (MAU)",
+        en: "QA at Glam AI, a top-10 Photo & Video app on the App Store worldwide: 18M installs and 2M monthly active users (MAU)",
       },
       {
         ru: "Обеспечивал стабильную работу воронок продаж и подписок (пейволы, покупки, пробные периоды, продление, отмена, оплата банковскими картами), что поддерживало рост выручки, retention и притока новых пользователей",
