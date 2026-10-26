@@ -23,8 +23,8 @@ const copy = {
   },
   hero: {
     intro: {
-      ru: "Тестирую мобильные игры и приложения на Android, iOS, Huawei, Amazon и Windows. Слежу за стабильностью, UX/UI и логикой.",
-      en: "I test mobile games and apps on Android, iOS, Huawei, Amazon and Windows, with an eye on stability, UX/UI and logic.",
+      ru: "Тестирую мобильные игры и приложения на Android, iOS и Huawei. Слежу за стабильностью, UX/UI и логикой.",
+      en: "I test mobile games and apps on Android, iOS and Huawei, with an eye on stability, UX/UI and logic.",
     },
     quoteStart: { ru: "Но чаще всего на что-то жму", en: "Usually I press something" },
     quoteEnd: { ru: "— и всё ломается.", en: "— and everything breaks." },
@@ -64,8 +64,8 @@ const copy = {
   about: {
     paragraphs: [
       {
-        ru: "Тестирую приложения на Android, iOS, Huawei, Amazon и Windows. Оцениваю стабильность, воспроизводимость и влияние ошибок на пользовательский опыт, уделяю внимание UX/UI и логике работы приложений.",
-        en: "I test applications across Android, iOS, Huawei, Amazon and Windows. I assess stability, reproducibility and the impact of defects on user experience, with attention to UX/UI and application behavior and logic.",
+        ru: "Тестирую приложения на Android, iOS и Huawei. Оцениваю стабильность, воспроизводимость и влияние ошибок на пользовательский опыт, уделяю внимание UX/UI и логике работы приложений.",
+        en: "I test applications across Android, iOS and Huawei. I assess stability, reproducibility and the impact of defects on user experience, with attention to UX/UI and application behavior and logic.",
       },
       {
         ru: "Работаю на всём релизном цикле: от анализа требований и тест-документации до регресса, проверки аналитики и мониторинга после выпуска.",
@@ -153,7 +153,7 @@ const jobs: Job[] = [
       { ru: "Тестирование LiveOps: ивенты и регулярные обновления, поддерживающие рост числа игроков", en: "LiveOps testing: events and regular updates that supported player-base growth" },
       { ru: "Снижение количества багов от релиза к релизу и стабильность сборок", en: "Fewer bugs from release to release and stable builds" },
       { ru: "Тестирование монетизации и внутриигровых покупок: улучшения дали +10% к покупкам", en: "Monetization and in-app purchase testing: improvements lifted purchases by 10%" },
-      { ru: "Ручное тестирование на iOS, Android, Amazon, Huawei и Windows", en: "Manual testing on iOS, Android, Amazon, Huawei and Windows" },
+      { ru: "Ручное тестирование на iOS, Android и Huawei", en: "Manual testing on iOS, Android and Huawei" },
       { ru: "Анализ требований и декомпозиция для проверки соответствия ТЗ", en: "Requirements analysis and decomposition to verify specification compliance" },
       { ru: "Тест-кейсы, чек-листы, тест-планы и баг-репорты в Asana", en: "Test cases, checklists, test plans and bug reports in Asana" },
       { ru: "A/B-тестирование и проверка аналитических событий в Amplitude и Swrve", en: "A/B testing and analytics-event validation in Amplitude and Swrve" },
@@ -210,8 +210,8 @@ const skills: { number: string; title: Copy; description: Copy; tools: string[] 
     number: "/02",
     title: { ru: "Тестирование и релизы", en: "Testing & releases" },
     description: {
-      ru: "Функциональное, нефункциональное, альфа/бета и регрессионное тестирование на Android, iOS, Huawei, Amazon и Windows.",
-      en: "Functional, non-functional, alpha/beta and regression testing on Android, iOS, Huawei, Amazon and Windows.",
+      ru: "Функциональное, нефункциональное, альфа/бета и регрессионное тестирование на Android, iOS и Huawei.",
+      en: "Functional, non-functional, alpha/beta and regression testing on Android, iOS and Huawei.",
     },
     tools: ["Android Studio", "Xcode", "3uTools", "Jenkins", "TeamCity"],
   },
