@@ -110,8 +110,8 @@ const jobs: Job[] = [
         en: "Kept sales funnels and subscriptions bug-free (paywalls, purchases, trials, renewals, cancellations, bank-card payments), supporting revenue, retention and new-user growth",
       },
       {
-        ru: "В продуктовой команде участвовал в улучшении Daily Shots: доля новых платящих пользователей, повторно использующих функцию, выросла с 7% до 58% за месяц",
-        en: "Contributed to Daily Shots product improvements: the share of new paying users reusing the feature grew from 7% to 58% in a month",
+        ru: "Участвовал в улучшении Daily Shots: повторное использование среди платящих выросло с 7% до 58%",
+        en: "Improved Daily Shots: reuse among paying users grew from 7% to 58%",
       },
       {
         ru: "Использовал ИИ-помощников в ежедневной работе: код-ревью с Claude, составление тест-кейсов и документации, автоматизированные проверки",
