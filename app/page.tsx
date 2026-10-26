@@ -613,7 +613,7 @@ export default function Home() {
     tabRefs.current[next]?.focus();
   };
 
-  const cvHref = asset(language === "ru" ? "/assets/files/CV.pdf" : "/assets/files/CV-en.pdf");
+  const cvHref = asset(language === "ru" ? "/assets/files/ru/CV_Gevork_Akopian.pdf" : "/assets/files/en/CV_Gevork_Akopian.pdf");
 
   return (
     <>
@@ -673,7 +673,7 @@ export default function Home() {
             </section>
 
             <div className="product-activity">
-              <a className="cv-card" href={cvHref} download aria-label={localize(copy.cv.aria, language)}>
+              <a className="cv-card" href={cvHref} download="CV_Gevork_Akopian.pdf" aria-label={localize(copy.cv.aria, language)}>
                 <span className="cv-card-face" aria-hidden="true"><span>QA_</span></span>
                 <span className="cv-card-copy">
                   <span className="cv-card-heading">
@@ -773,8 +773,8 @@ export default function Home() {
                       </a>
                     </li>
                   ))}
-                  <li><a className="connect-link" href={asset("/assets/files/CV.pdf")} download>{localize(copy.about.cvRu, language)}</a></li>
-                  <li><a className="connect-link" href={asset("/assets/files/CV-en.pdf")} download>{localize(copy.about.cvEn, language)}</a></li>
+                  <li><a className="connect-link" href={asset("/assets/files/ru/CV_Gevork_Akopian.pdf")} download="CV_Gevork_Akopian.pdf">{localize(copy.about.cvRu, language)}</a></li>
+                  <li><a className="connect-link" href={asset("/assets/files/en/CV_Gevork_Akopian.pdf")} download="CV_Gevork_Akopian.pdf">{localize(copy.about.cvEn, language)}</a></li>
                 </ul>
               </div>
               <div {...reveal(2, "about-copy")}>
