@@ -102,36 +102,44 @@ const jobs: Job[] = [
     start: [2025, 7],
     bullets: [
       {
-        ru: "Ручное тестирование iOS-приложения, API и интеграций с бэкендом; проверка AI/ML-функций обработки фото и видео",
-        en: "Manually tested the iOS app, APIs and backend integrations, including AI/ML image and video processing features",
+        ru: "QA в Glam AI, одном из топ-5 приложений категории Photo & Video в App Store по всему миру: 16 млн установок и 40 млн генераций в месяц",
+        en: "QA at Glam AI, a top-5 Photo & Video app on the App Store worldwide: 16M installs and 40M generations per month",
       },
       {
-        ru: "Проверка подписок и монетизации: пейволы, покупки, пробные периоды, отмена, продление и истечение подписок",
-        en: "Validated subscription and monetization flows: paywalls, purchases, trials, cancellations, renewals and subscription expiry",
+        ru: "Обеспечивал стабильную работу воронок продаж и подписок (пейволы, покупки, пробные периоды, продление, отмена, оплата банковскими картами), что поддерживало рост выручки, retention и притока новых пользователей",
+        en: "Kept sales funnels and subscriptions bug-free (paywalls, purchases, trials, renewals, cancellations, bank-card payments), supporting revenue, retention and new-user growth",
       },
       {
-        ru: "В составе продуктовой команды участвовал в улучшении Daily Shots — retention направления вырос на 50%",
-        en: "Contributed to product-team improvements in Daily Shots, where retention increased by 50%",
+        ru: "В продуктовой команде участвовал в улучшении Daily Shots: при таком масштабе retention направления вырос на 50%",
+        en: "Contributed to Daily Shots product improvements, where retention grew by 50% at this scale",
       },
       {
-        ru: "Подготовка и проведение функциональных, регрессионных, интеграционных, smoke- и исследовательских проверок перед еженедельными релизами",
-        en: "Planned and performed functional, regression, integration, smoke and exploratory testing for weekly releases",
+        ru: "Использовал ИИ-помощников в ежедневной работе: код-ревью с Claude, составление тест-кейсов и документации, автоматизированные проверки",
+        en: "Used AI assistants daily: code review with Claude, test-case and documentation writing, automated checks",
       },
       {
-        ru: "Проверка API и серверной логики с помощью Postman, Charles Proxy и Proxyman",
-        en: "Tested APIs and backend logic using Postman, Charles Proxy and Proxyman",
+        ru: "Улучшал QA-процессы и работу с задачами в Notion, что ускорило работу команды",
+        en: "Improved QA processes and task management in Notion, speeding up the team's work",
       },
       {
-        ru: "Разбор и воспроизведение продакшен-дефектов совместно с iOS-, backend-, ML-командами, специалистами по компьютерному зрению, поддержкой и продуктовой командой",
-        en: "Investigated and reproduced production defects with iOS, backend, ML, computer vision, support and product teams",
+        ru: "Ручное тестирование iOS-приложения, API и интеграций с бэкендом, включая AI/ML-функции обработки фото и видео; функциональные, регрессионные, smoke- и исследовательские проверки перед еженедельными релизами",
+        en: "Manual testing of the iOS app, APIs and backend integrations, including AI/ML photo and video features; functional, regression, smoke and exploratory testing for weekly releases",
       },
       {
-        ru: "Участие в релизных процессах на базе CI/CD; работа с Xcode, TestFlight и GitHub",
-        en: "Participated in CI/CD release processes; worked with Xcode, TestFlight and GitHub",
+        ru: "Проверка API и серверной логики в Postman, Charles Proxy и Proxyman",
+        en: "API and backend testing with Postman, Charles Proxy and Proxyman",
       },
       {
-        ru: "Работа с Firebase, Bugsnag, Adapty и Amplitude при проверке стабильности, подписок и продуктовых сценариев",
-        en: "Used Firebase, Bugsnag, Adapty and Amplitude to validate stability, subscriptions and product flows",
+        ru: "Работа с консолью, установка и проверка сборок (Xcode, TestFlight), Git, участие в CI/CD-релизах",
+        en: "Command line, build installation and verification (Xcode, TestFlight), Git and CI/CD releases",
+      },
+      {
+        ru: "Разбор и воспроизведение продакшен-дефектов вместе с iOS-, backend-, ML-командами, поддержкой и продуктом",
+        en: "Investigated and reproduced production defects with iOS, backend, ML, support and product teams",
+      },
+      {
+        ru: "Firebase, Bugsnag, Adapty и Amplitude для проверки стабильности, подписок и продуктовых сценариев",
+        en: "Firebase, Bugsnag, Adapty and Amplitude to validate stability, subscriptions and product flows",
       },
     ],
   },
@@ -142,6 +150,9 @@ const jobs: Job[] = [
     start: [2023, 10],
     end: [2025, 5],
     bullets: [
+      { ru: "Тестирование LiveOps: ивенты и регулярные обновления, поддерживающие рост числа игроков", en: "LiveOps testing: events and regular updates that supported player-base growth" },
+      { ru: "Снижение количества багов от релиза к релизу и стабильность сборок", en: "Fewer bugs from release to release and stable builds" },
+      { ru: "Тестирование монетизации и внутриигровых покупок: улучшения дали +10% к покупкам", en: "Monetization and in-app purchase testing: improvements lifted purchases by 10%" },
       { ru: "Ручное тестирование на iOS, Android, Amazon, Huawei и Windows", en: "Manual testing on iOS, Android, Amazon, Huawei and Windows" },
       { ru: "Анализ требований и декомпозиция для проверки соответствия ТЗ", en: "Requirements analysis and decomposition to verify specification compliance" },
       { ru: "Тест-кейсы, чек-листы, тест-планы и баг-репорты в Asana", en: "Test cases, checklists, test plans and bug reports in Asana" },
