@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowLeft, Laptop } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowUpRight, Laptop, Smartphone } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type Language = "ru" | "en";
@@ -11,10 +11,12 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 type Product = {
   name: string;
   icon: string; // under public/, shown at 44 px
+  device: "mac" | "iphone";
   platform: Copy;
   description: Copy;
-  download: string;
-  repo: string; // GitHub owner/name; downloads are summed over all its releases
+  download: string; // direct download, or the store page
+  repo?: string; // GitHub owner/name; downloads are summed over all its releases
+  store?: string; // store name shown instead of the download count
 };
 
 // Add a product here; the page lists them in this order.
@@ -22,6 +24,7 @@ const products: Product[] = [
   {
     name: "Mistype",
     icon: "/assets/img/products/mistype.png",
+    device: "mac",
     platform: { ru: "macOS 15+", en: "macOS 15+" },
     description: {
       ru: "Исправляет текст, набранный не в той раскладке: ghbdtn → привет. Бесплатно, без подписки.",
@@ -29,6 +32,18 @@ const products: Product[] = [
     },
     download: "https://github.com/shaadow0king/keyboard-switcher/releases/latest/download/Mistype.dmg",
     repo: "shaadow0king/keyboard-switcher",
+  },
+  {
+    name: "PinSay",
+    icon: "/assets/img/products/pinsay.png",
+    device: "iphone",
+    platform: { ru: "iOS 17+", en: "iOS 17+" },
+    description: {
+      ru: "Карта любимых мест: отмечайте кафе, виды и тихие уголки, добавляйте фото и делитесь ими.",
+      en: "A map of your favorite places: pin cafés, views and quiet spots, add photos and share them.",
+    },
+    download: "https://apps.apple.com/app/pinsay/id6813660305",
+    store: "App Store",
   },
 ];
 
@@ -58,7 +73,9 @@ const copy = {
   title: { ru: "Продукты", en: "Products" },
   intro: { ru: "Которые я создаю с помощью AI.", en: "That I build with AI." },
   download: { ru: "Скачать", en: "Download" },
+  open: { ru: "Открыть", en: "Open" },
   macOnly: { ru: "Только для Mac", en: "Mac only" },
+  iphoneOnly: { ru: "Для iPhone", en: "For iPhone" },
   downloads: { ru: "Скачиваний", en: "Downloads" },
   comingSoon: { ru: "Скоро здесь появятся новые приложения.", en: "New apps coming soon." },
   langGroup: { ru: "Выбор языка", en: "Language selector" },
@@ -70,10 +87,11 @@ export default function Products() {
   const [downloads, setDownloads] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    for (const product of products) {
-      fetchDownloads(product.repo)
+    for (const { repo } of products) {
+      if (!repo) continue;
+      fetchDownloads(repo)
         .then((count) => {
-          if (count !== null) setDownloads((current) => ({ ...current, [product.repo]: count }));
+          if (count !== null) setDownloads((current) => ({ ...current, [repo]: count }));
         })
         .catch(() => {});
     }
@@ -131,31 +149,43 @@ export default function Products() {
               <p>{t(copy.intro)}</p>
             </div>
             <ul className="products-list">
-              {products.map((product) => (
+              {products.map((product) => {
+                const deviceLabel = t(product.device === "mac" ? copy.macOnly : copy.iphoneOnly);
+                const DeviceIcon = product.device === "mac" ? Laptop : Smartphone;
+                const OpenIcon = product.store ? ArrowUpRight : ArrowDown;
+                const count = product.repo ? downloads[product.repo] : undefined;
+                return (
                 <li key={product.name}>
-                  <a className="cv-card" href={product.download} aria-label={`${t(copy.download)} ${product.name}`}>
+                  <a
+                    className="cv-card"
+                    href={product.download}
+                    aria-label={`${t(product.store ? copy.open : copy.download)} ${product.name}${product.store ? ` (${product.store})` : ""}`}
+                    {...(product.store ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  >
                     {/* eslint-disable-next-line @next/next/no-img-element -- static export, a 44 px icon */}
                     <img className="products-icon" src={`${basePath}${product.icon}`} alt="" width={44} height={44} />
                     <span className="cv-card-copy">
                       <span className="cv-card-heading">
                         <span className="cv-card-title">{product.name}</span>
-                        <span className="cv-card-version products-platform" title={t(copy.macOnly)}>
-                          <Laptop size={13} strokeWidth={2} aria-label={t(copy.macOnly)} />
+                        <span className="cv-card-version products-platform" title={deviceLabel}>
+                          <DeviceIcon size={13} strokeWidth={2} aria-label={deviceLabel} />
                           {t(product.platform)}
                         </span>
-                        {downloads[product.repo] !== undefined && (
+                        {product.store && <span className="cv-card-version products-downloads">{product.store}</span>}
+                        {count !== undefined && (
                           <span className="cv-card-version products-downloads" title={t(copy.downloads)}>
                             <ArrowDown size={13} strokeWidth={2} aria-hidden="true" />
-                            {downloadsLabel(downloads[product.repo], language)}
+                            {downloadsLabel(count, language)}
                           </span>
                         )}
                       </span>
                       <span className="cv-card-description">{t(product.description)}</span>
                     </span>
-                    <span className="cv-card-open" aria-hidden="true"><ArrowDown size={18} strokeWidth={2} /></span>
+                    <span className="cv-card-open" aria-hidden="true"><OpenIcon size={18} strokeWidth={2} /></span>
                   </a>
                 </li>
-              ))}
+                );
+              })}
               <li className="products-soon">{t(copy.comingSoon)}</li>
             </ul>
           </div>
